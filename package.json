@@ -1,0 +1,24 @@
+{
+  "name": "near-signon",
+  "version": "1.0.0",
+  "description": "Sign on to NEAR wallet from node",
+  "main": "near.js",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "electron": "^8.1.1",
+    "nearlib": "^0.22.0",
+    "open": "^7.0.3",
+    "prompt": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NEAR",
+    "Blockchain",
+    "node"
+  ],
+  "author": "Daniel Iwo",
+  "license": "MIT"
+}
