@@ -27,12 +27,14 @@ exports.newFullAccessKey=async function(account,config){
 exports.checkFullAccess=async function(account,config,keypair)
 {
 	const near=await nearlib.connect(config);
+	//console.log(near);
 	const keys=await near.connection.provider.query(`access_key/${account.name}`, '');
-	const key=keys.keys.filter(k=>k.public_key===keypair.publicKey.toString())[0]
-	if(key.access_key.permission!='FullAccess')
-	{			
-		return false;
+	const key=await keys.keys.filter(k=>k.public_key===keypair.publicKey.toString())[0];
+	console.log(key);
+	if(key.access_key.permission==='FullAccess')
+	{
+		return true;	
 	}
-	return true;
+	return false;
 }
 
